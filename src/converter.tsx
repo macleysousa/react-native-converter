@@ -1,5 +1,5 @@
 
-import * as Localization from 'expo-localization';
+import { locale } from 'expo-localization';
 
 export const numberToString = (value: number, format: 'N0' | 'N1' | 'N2' | 'N3' | 'N4' = 'N0') => {
     /**
@@ -32,11 +32,11 @@ export const numberToString = (value: number, format: 'N0' | 'N1' | 'N2' | 'N3' 
     return result;
 }
 
-type locale = 'en-US' | 'pt-BR';
+type culture = 'en-US' | 'pt-BR';
 const months_pt_br = ['', 'Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Septembro', 'Outubro', 'Novembro', 'Dezembro'];
 const months_en_us = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 type FomatDate = 'd' | 'g' | 'G' | 'M' | 'M3' | 't' | 'T';
-export const dateToString = (value: Date, format: FomatDate = 'd', locale?: locale) => {
+export const dateToString = (value: Date, format: FomatDate = 'd', culture?: culture) => {
     /*
     global
     t => hh:mm
@@ -58,7 +58,7 @@ export const dateToString = (value: Date, format: FomatDate = 'd', locale?: loca
     */
 
     let result: string;
-    var lang: locale = locale || Localization.locales.toString();
+    var lang = culture || locale;
     const year = value.toJSON().substring(0, 4);
     const month = value.toJSON().substring(5, 7);
     const day = value.toJSON().substring(8, 10);
