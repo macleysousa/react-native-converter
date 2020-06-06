@@ -1,0 +1,64 @@
+{
+    "name": "react-native-converter",
+    "version": "1.0.0",
+    "description": "Converter for React Native",
+    "main": "src/converter.tsx",
+    "keywords": [
+        "react-native",
+        "react",
+        "converter"
+    ],
+    "author": "Macley Sousa",
+    "license": "MIT",
+    "scripts": {
+        "prettify": "import-sort --write 'src/**/*.tsx' && prettier --write 'src/**/*.js' && eslint 'src/**/*.tsx'"
+    },
+    "devDependencies": {
+        "babel-eslint": "~10.1.0",
+        "eslint": "~6.8.0",
+        "eslint-config-airbnb": "~18.1.0",
+        "eslint-config-prettier": "~6.10.0",
+        "eslint-plugin-import": "~2.20.0",
+        "eslint-plugin-jsx-a11y": "~6.2.0",
+        "eslint-plugin-react": "~7.19.0",
+        "eslint-plugin-react-hooks": "~3.0.0",
+        "husky": "~4.2.0",
+        "import-sort": "~6.0.0",
+        "import-sort-cli": "~6.0.0",
+        "import-sort-parser-babylon": "~6.0.0",
+        "import-sort-parser-typescript": "~6.0.0",
+        "import-sort-style-pietile": "~1.2.0",
+        "lint-staged": "~10.1.0",
+        "prettier": "~2.0.0"
+    },
+    "peerDependencies": {
+        "react": ">= 16.3.0",
+        "react-native": ">= 0.54.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx}": [
+            "import-sort --write",
+            "prettier --write",
+            "git add"
+        ],
+        "README.md": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "bugs": {
+        "url": "https://github.com/macleysousa/react-native-converter/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/macleysousa/react-native-converter.git"
+    },
+    "dependencies": {
+        "expo-localization": "^8.1.0"
+    }
+}
