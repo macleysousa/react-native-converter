@@ -29,11 +29,11 @@ converter.numberToString(1000.5, 'N2'); //result 1.000,50
 
 value   | format            | description                            |
 :------ | :---------------- | :------------------------------------- |
- number | N0                | return string  ex: `1.000`             |
- number | N1                | return string  ex: `1.000,0`           |
- number | N2                | return string  ex: `1.000,00`          |
- number | N3                | return string  ex: `1.000,000`         |
- number | N4                | return string  ex: `1.000,0000`        |   
+ number | N0                | return string  ex: 1.000               |
+ number | N1                | return string  ex: 1.000,0             |
+ number | N2                | return string  ex: 1.000,00            |
+ number | N3                | return string  ex: 1.000,000           |
+ number | N4                | return string  ex: 1.000,0000          |   
 
 ## dateToString
 ```jsx
