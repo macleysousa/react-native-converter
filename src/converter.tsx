@@ -51,8 +51,8 @@ export const dateToString = (value: Date, format: FomatDate = 'd', locale?: loca
 
     pt-BR 
     d =>  'dd/MM/yyyy'  ex: 02/01/2020
-    g =>  'dd/MM/yyyy hh:mm'  ex: 2020/01/02 13:30
-    G =>  'dd/MM/yyyy hh:mm'  ex: 2020/01/02 13:30:12
+    g =>  'dd/MM/yyyy hh:mm'  ex: 02/01/2020 13:30
+    G =>  'dd/MM/yyyy hh:mm'  ex: 02/01/2020 13:30:12
     M =>  'dd MM' ex: 01 Janeiro
     M3 => 'dd MM' ex: 01 Jan
     */
