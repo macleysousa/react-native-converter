@@ -58,6 +58,19 @@ value   | format            | description                              |
  Date   | M                 | return string  ex: `01 January`          | 
  Date   | M3                | return string  ex: `01 Jan`              | 
 
+## dateToTimezoneOffset
+```jsx
+import * as converter from 'react-native-converter';
+
+converter.dateToTimezoneOffset(new Date(), 60);
+```
+
+### Properties
+
+value   | timezoneOffset    |
+:------ | :---------------- | 
+ Date   | Minutes           |
+
 ## License
 
 MIT License. © Macley Sousa

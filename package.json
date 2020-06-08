@@ -1,6 +1,6 @@
 {
     "name": "react-native-converter",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Converter for React Native",
     "main": "src/converter.tsx",
     "keywords": [

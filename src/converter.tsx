@@ -1,6 +1,7 @@
 
 import { locale } from 'expo-localization';
 
+/** Convert number to string example 10.000,01 */
 export const numberToString = (value: number, format: 'N0' | 'N1' | 'N2' | 'N3' | 'N4' = 'N0') => {
     /**
      * N0 => ex: 1.000
@@ -9,7 +10,6 @@ export const numberToString = (value: number, format: 'N0' | 'N1' | 'N2' | 'N3' 
      * N3 => ex: 1.000,000
      * N4 => ex: 1.000,0000
      */
-
     let result: string;
 
     switch (format) {
@@ -36,6 +36,7 @@ type culture = 'en-US' | 'pt-BR';
 const months_pt_br = ['', 'Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Septembro', 'Outubro', 'Novembro', 'Dezembro'];
 const months_en_us = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 type FomatDate = 'd' | 'g' | 'G' | 'M' | 'M3' | 't' | 'T';
+/** Convert date to string example 2020/01/02*/
 export const dateToString = (value: Date, format: FomatDate = 'd', culture?: culture) => {
     /*
     global
@@ -136,4 +137,12 @@ export const dateToString = (value: Date, format: FomatDate = 'd', culture?: cul
             break;
     }
     return result;
+}
+
+/** Convert date to timezoneOffset
+ * Pass timezoneOffset in minutes
+*/
+export const dateToTimezoneOffset = (value: Date, timezoneOffset: number) => {
+    const date = new Date(value);
+    return new Date(date.setUTCHours(date.getUTCHours() - (timezoneOffset / 60)));
 }
